@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +10,11 @@
 </head>
 <body>
   <header class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">Smile Pay</a>
+    <div class="navi">
+    <a class="navbar-brand" href="#">
+      <img src="smilepay.png" alt="smilepaytag" height="50" width="100">
+    </a>
+
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -19,22 +24,30 @@
         <a class="nav-link" href="#">Transactions</a>
         <a class="nav-link" href="#">Planning</a>
         <a class="nav-link" href="#">Settings</a>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
       </div>
     </div>
+  </div>
   </header>
 
   <main class="container-fluid">
     <div class="row">
       <div class="col-md-3">
-        <a href="#" class = "list-group-item list-group-item-action active">Dashboard</a>
-        <div class="list-group">
-          <a href="#" class="list-group-item list-group-item-action ">Accounts</a>
-          <a href="#" class="list-group-item list-group-item-action">Cards</a>
-          <a href="#" class="list-group-item list-group-item-action">Payments</a>
-          <a href="#" class="list-group-item list-group-item-action">Budgets</a>
-          <a href="#" class="list-group-item list-group-item-action">Goals</a>
+        <div class="sidebar">
+          <a href="#" class="list-group-item list-group-item-action active">Dashboard</a>
+          <div class="list-group">
+            <a href="#" class="list-group-item list-group-item-action">Accounts</a>
+            <a href="#" class="list-group-item list-group-item-action">Cards</a>
+            <a href="#" class="list-group-item list-group-item-action">Payments</a>
+            <a href="#" class="list-group-item list-group-item-action">Budgets</a>
+            <a href="#" class="list-group-item list-group-item-action">Goals</a>
+          </div>
         </div>
       </div>
+
       <div class="col-md-9">
         <div class="card">
           <div class="card-header">
@@ -43,97 +56,97 @@
           <div class="card-body">
             <div class="row">
               <div class="col-md-3">
-                <img src="balance.png" alt="balancepng" >
+                <img src="balance.png" alt="balancepng">
                 <h5 class="card-title">Balance</h5>
                 <p class="card-text">$592.323</p>
               </div>
               <div class="col-md-3">
-                <img src="income.png" alt="incomepng" >
+                <img src="income.png" alt="incomepng">
                 <h5 class="card-title">Income</h5>
                 <p class="card-text">$149.513</p>
               </div>
               <div class="col-md-3">
-                <img src="savings.png" alt="savingspng" >
+                <img src="savings.png" alt="savingspng">
                 <h5 class="card-title">Savings</h5>
                 <p class="card-text">$79.290</p>
               </div>
               <div class="col-md-3">
-                <img src="expenses.png" alt="expencespng" >
+                <img src="expenses.png" alt="expencespng">
                 <h5 class="card-title">Expenses</h5>
                 <p class="card-text">$271.560</p>
               </div>
             </div>
           </div>
-          </div>
-        
-          
-          <div class ="col mt-3">
-            <div class = "row">
+        </div>
 
-                <div class = "col-md-6">
-                    <div class = "card mt-3">
-                        <div class="card-header">Chart</div>
-                        <div class ="card-body">
-                            <div class="chart-placeholder w-75 py-3 mx-auto border rounded">
-                                <img src = "graph.png" alt ="graphpicture" width="500" height="300"> 
-                            </div>
-                        </div> 
-                    </div>
-                </div>
-
-                <div class = "col-md-6">
-                    <div class = "card mt-3">
-                        
-                        <div class="card-header">Card</div>
-                        <div class ="card-body">
-                            <img src = "creditcard.png" alt  = "creditcard">
-                            <div class="card-body-1"></div>
-                        </div> 
-                    </div>
-                </div>
-
-                
-
-            </div>
-
-          </div>
-          
-               
-
-
-              <div class="col mt-3">
-                <div class="row">
-
-                  <div class="col-md-6">
-                    <div class="card mt-3">
-                      <div class="card-header">
-                        Transactions
-                      </div>
-                      <div class="card-body">
-                        <h5 class="card-body">Adobe Photoshop</h5>
-                        <h5 class="card-body">Sketch</h5>
-                        <h5 class="card-body">Among Us</h5>
-                      </div>
-                    </div>
-                  </div>
-              
-                  <div class="col-md-6">
-                    <div class="card mt-3">
-                      <div class="card-header">
-                        Planning
-                      </div>
-                      <div class="card-body">
-                        <h5 class="card-body">Buy a house </h5>
-                        <h5 class="card-body">Visit to japan</h5>
-                      </div>
-                    </div>
-                  </div>
-                
-                </div>  <!-- the end of row-->
+        <div class="row mt-3">
+          <div class="col-md-6">
+            <div class="card mt-3">
+              <div class="card-body">
+                <img src="graph.png" alt="Graph" width="500" height="300">
               </div>
+            </div>
+          </div>
 
-             
+          <div class="col-md-6">
+            <div class="card mt-3" id="credit">
+              <div class="card-body">
+                <img src="creditcard.png" alt="Credit card" class="mb-3">
 
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="row mt-3">
+                      <div class="col-md-6">
+                        <span class="text-muted">Your Balance</span>
+                        <h2 class="balance-value">$9,876.54</h2>
+                      </div>
+                      <div class="col-md-6">
+                        <span class="text-muted">Traffic/Week:</span>
+                        <img src="transaction.png" alt="transaction card" height="20" width="20">  
+                      </div>
+                    </div>
+                  </div>
+                </div>
 
-    </div>
-  </main>
+                <div class="row mt-3">
+                  <div class="col-md-4">
+                    <span class="text-muted">Currency:</span>
+                    <span>USD/US Dollar</span>
+                  </div>
+                  <div class="col-md-4">
+                    <span class="text-muted">Status:</span>
+                    <strong>Active</strong>
+                  </div>
+                  <div class="col-md-4">
+                    <span class="text-muted">Exp:</span>
+                    <span>12/14</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mt-3">
+          <div class="col-md-6">
+            <div class="card mt-3">
+              <div class="card-header">
+                Transactions
+              </div>
+              <div class="card-body">
+                <h5 class="card-body"><img src="photoshop.png" alt="photoshop_pic" height="50" width="50">Adobe Photoshop</h5>
+                <h5 class="card-body"><img src="sketch logo.png" alt="photoshop_pic" height="50" width="50"> Sketch</h5>
+                <h5 class="card-body"><img src="amongus.png" alt="photoshop_pic" height="50" width="50">Among Us</h5>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="card mt-3">
+              <div class="card-header">
+                Planning
+              </div>
+              <div class="card-body">
+                <h5 class="card-body">Buy a house </h5>
+                <h5 class="card-body">Visit to Japan</h5>
+              </div
