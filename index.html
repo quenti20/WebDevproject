@@ -1,56 +1,91 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Simile Pay Dashboard</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
   <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <header class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="navi">
-    <a class="navbar-brand" href="#">
-      <img src="smilepay.png" alt="smilepaytag" height="50" width="100">
-    </a>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- <link rel="stylesheet" href="style2.css"> -->
+  <!-- <link rel="code" href="code.js" -->
 
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav">
-        <a class="nav-link active" href="#">Dashboard</a>
-        <a class="nav-link" href="#">Transactions</a>
-        <a class="nav-link" href="#">Planning</a>
-        <a class="nav-link" href="#">Settings</a>
-        <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <img src = "smilepay.png" alt ="coolpic" height="50%" width="20%">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#Money">Money Flow</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#trans">Transactions</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#Plan">Planning</a>
+          </li>
+      
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
         </form>
       </div>
     </div>
-  </div>
-  </header>
+  </nav>
+
 
   <main class="container-fluid">
     <div class="row">
       <div class="col-md-3">
-        <div class="sidebar">
-          <a href="#" class="list-group-item list-group-item-action active">Dashboard</a>
-          <div class="list-group">
-            <a href="#" class="list-group-item list-group-item-action">Accounts</a>
-            <a href="#" class="list-group-item list-group-item-action">Cards</a>
-            <a href="#" class="list-group-item list-group-item-action">Payments</a>
-            <a href="#" class="list-group-item list-group-item-action">Budgets</a>
-            <a href="#" class="list-group-item list-group-item-action">Goals</a>
-          </div>
-        </div>
+        
+<div id="nav-bar">
+  <input id="nav" type="checkbox"/>
+  <div id="nav-header"><a id="nav-title" href="https://codepen.io" target="_blank">C<i class="fab fa-codepen"></i>ONTENT</a>
+    
+    <hr/>
+  </div>
+  <div id="nav-content">
+    <div class="nav-button"><i class="fas fa-palette"></i><span>Your Work</span></div>
+    <div class="nav-button"><i class="fas fa-images"></i><span>Assets</span></div>
+    <div class="nav-button"><i class="fas fa-thumbtack"></i><span>Pinned Items</span></div>
+    <hr/>
+    <div class="nav-button"><i class="fas fa-heart"></i><span>Following</span></div>
+    <div class="nav-button"><i class="fas fa-chart-line"></i><span>Trending</span></div>
+    <div class="nav-button"><i class="fas fa-fire"></i><span>Challenges</span></div>
+    <div class="nav-button"><i class="fas fa-magic"></i><span>Spark</span></div>
+    <hr/>
+    <div class="nav-button"><i class="fas fa-gem"></i><span>Codepen Pro</span></div>
+    <div id="nav-content-highlight"></div>
+  </div>
+  <input id="nav-footer-toggle" type="checkbox"/>
+  <div id="nav-footer">
+    <div id="nav-footer-heading">
+      <div id="nav-footer-avatar"><img src="https://gravatar.com/avatar/4474ca42d303761c2901fa819c4f2547"/></div>
+      <div id="nav-footer-titlebox"><a id="nav-footer-title" href="https://codepen.io/uahnbu/pens/public" target="_blank">Adam</a><span id="nav-footer-subtitle">Admin</span></div>
+      <label for="nav-footer-toggle"><i class="fas fa-caret-up"></i></label>
+    </div>
+    
+  </div>
+</div>
       </div>
 
       <div class="col-md-9">
         <div class="card">
-          <div class="card-header">
+          <div class="card-header" id="Money">
             Money Flow
           </div>
           <div class="card-body">
@@ -83,7 +118,7 @@
           <div class="col-md-6">
             <div class="card mt-3">
               <div class="card-body">
-                <img src="graph.png" alt="Graph" width="500" height="300">
+                <canvas id="myChart" height="300"></canvas>
               </div>
             </div>
           </div>
@@ -102,7 +137,7 @@
                       </div>
                       <div class="col-md-6">
                         <span class="text-muted">Traffic/Week:</span>
-                        <img src="transaction.png" alt="transaction card" height="20" width="20">  
+                        <img src="transaction.png" alt="transaction card" height="20" width="20">
                       </div>
                     </div>
                   </div>
@@ -130,11 +165,12 @@
         <div class="row mt-3">
           <div class="col-md-6">
             <div class="card mt-3">
-              <div class="card-header">
+              <div class="card-header" id="trans">
                 Transactions
               </div>
               <div class="card-body">
-                <h5 class="card-body"><img src="photoshop.png" alt="photoshop_pic" height="50" width="50">Adobe Photoshop</h5>
+                <h5 class="card-body"><img src="photoshop.png" alt="photoshop_pic" height="50" width="50">Adobe
+                  Photoshop</h5>
                 <h5 class="card-body"><img src="sketch logo.png" alt="photoshop_pic" height="50" width="50"> Sketch</h5>
                 <h5 class="card-body"><img src="amongus.png" alt="photoshop_pic" height="50" width="50">Among Us</h5>
               </div>
@@ -143,10 +179,81 @@
 
           <div class="col-md-6">
             <div class="card mt-3">
-              <div class="card-header">
+              <div class="card-header" id="Plan">
                 Planning
               </div>
               <div class="card-body">
-                <h5 class="card-body">Buy a house </h5>
-                <h5 class="card-body">Visit to Japan</h5>
-              </div
+                <h5 class="card-body"><img src="house.png" alt="houselogo" height="50" width="50"> Buy a house </h5>
+                
+                  <div id="myBar">40%</div>
+                
+                <h5 class="card-body"><img src="aviation logo.jpg" alt="houselogo" height="50" width="50"> Visit Japan </h5>
+                <div id="myBar2">40%</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    // Dummy data for illustration, replace it with your actual data
+    var chartData = {
+      labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+      datasets: [{
+        label: 'Monthly Sales',
+        data: [10, 20, 15, 25, 30, 22, 18],
+        backgroundColor: 'rgba(75, 192, 192, 0.2)',
+        borderColor: 'rgba(75, 192, 192, 1)',
+        borderWidth: 1
+      }]
+    };
+
+    var ctx = document.getElementById('myChart').getContext('2d');
+    var myChart = new Chart(ctx, {
+      type: 'line',
+      data: chartData,
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+          x: {
+            beginAtZero: true
+          },
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+  });
+
+  var i = 0;
+function move() {
+  if (i == 0) {
+    i = 1;
+    var elem = document.getElementById("myBar");
+    var width = 40;
+    var id = setInterval(frame, 40);
+    function frame() {
+      if (width >= 100) {
+        clearInterval(id);
+        i = 0;
+      } else {
+        width++;
+        elem.style.width = width + "%";
+        elem.innerHTML = width + "%";
+      }
+    }
+  }
+}
+
+
+
+</script>
+
+
+
